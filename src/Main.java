@@ -1,20 +1,17 @@
 public class Main {
     public static void main(String[] args) {
-        int accmount = 100; //Начальная сумма на счете
-        int payment = 100; //сумма пополнения
-        int summ = accmount + payment;
+        int balance = 100; //Начальная сумма на счете
+        int payment = 1100; //Сумма пополнения
+        int summ = balance + payment; //Итого на счете после пополнения с учетом баланса
 
-
-           int y=payment/100;
-        if (accmount+payment>200) {
-                 y=y;
-        }
-        else {
-            y=0;
+        int bonus = payment / 100;
+        if (balance + payment > 200) {
+            bonus = bonus;
+        } else {
+            bonus = 0;
 
         }
-        int bonus = y;
 
-        System.out.println(" вам начислен бонус " + bonus + " рубля(ей). Ваш остаток на счете " + (summ+y) + " рубля(ей)");
+        System.out.println(" Вам начислен бонус " + bonus + " рубля(ей). Ваш остаток на счете " + (summ + bonus) + " рубля(ей)");
     }
 }
